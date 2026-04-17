@@ -1,0 +1,121 @@
+{
+  "app": {
+    "title": "फार्म ईज़ी",
+    "tagline": "किसानों के लिए खेती आसान",
+    "getStarted": "शुरू करें",
+    "browseEquipment": "उपकरण देखें",
+    "home": "होम",
+    "schemes": "योजनाएं",
+    "products": "उत्पाद",
+    "trade": "व्यापार",
+    "help": "मदद",
+    "login": "लॉगिन",
+    "profile": "प्रोफाइल",
+    "logout": "लॉग आउट",
+    "register": "रजिस्टर"
+  },
+  "counters": {
+    "activeFarmers": "सक्रिय किसान",
+    "equipmentListed": "उपकरण सूचीबद्ध",
+    "govtSchemes": "सरकारी योजनाएं"
+  },
+  "features": {
+    "equipmentRental": "उपकरण किराया",
+    "equipmentRentalDesc": "पास के किसानों के साथ उपकरण किराए पर लें या साझा करें।",
+    "landRental": "जमीन किराया",
+    "landRentalDesc": "किसानों के बीच आसानी से जमीन लीज पर लें।",
+    "cropTrade": "फसल व्यापार",
+    "cropTradeDesc": "किसान से ग्राहक तक सीधा व्यापार, बिना बिचौलिए।",
+    "govtSchemes": "सरकारी योजनाएं",
+    "govtSchemesDesc": "सरकारी योजनाएं खोजें और आवेदन करें।",
+    "aiAssistant": "AI सहायक",
+    "aiAssistantDesc": "24/7 खेती के सुझाव पाएं।"
+  },
+  "auth": {
+    "name": "नाम",
+    "email": "ईमेल",
+    "phone": "फोन",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "location": "स्थान",
+    "language": "भाषा",
+    "role": "भूमिका",
+    "farmer": "किसान",
+    "customer": "ग्राहक",
+    "verifyOtp": "OTP सत्यापित करें",
+    "otpSent": "आपके ईमेल पर OTP भेजा गया",
+    "enterOtp": "OTP दर्ज करें",
+    "back": "वापस",
+    "resendOtp": "OTP दोबारा भेजें",
+    "resendIn": "{{seconds}} सेकंड में दोबारा भेजें",
+    "otpHint": "ईमेल से 6 अंकों का कोड दर्ज करें (चिपकाने पर खाली स्थान ठीक है)।",
+    "loginSubtitle": "सूची, व्यापार और योजनाएं प्रबंधित करने के लिए साइन इन करें",
+    "registerSubtitle": "खाता बनाएं और समुदाय से जुड़ें",
+    "secureStep": "बस एक कदम — ईमेल सत्यापित करें"
+  },
+  "equipment": {
+    "title": "उपकरण",
+    "listEquipment": "उपकरण सूचीबद्ध करें",
+    "titleLabel": "शीर्षक",
+    "description": "विवरण",
+    "pricePerDay": "प्रति दिन कीमत (₹)",
+    "category": "श्रेणी",
+    "availability": "उपलब्धता",
+    "location": "स्थान",
+    "contact": "संपर्क",
+    "confirmDeal": "डील पुष्टि करें",
+    "nearby": "पास वाले पहले"
+  },
+  "land": {
+    "title": "जमीन",
+    "listLand": "जमीन सूचीबद्ध करें",
+    "pricePerMonth": "प्रति महीने कीमत (₹)",
+    "area": "क्षेत्र"
+  },
+  "trade": {
+    "title": "फसल व्यापार",
+    "listCrop": "फसल सूचीबद्ध करें",
+    "cropName": "फसल का नाम",
+    "pricePerUnit": "प्रति इकाई कीमत (₹)",
+    "unit": "इकाई",
+    "quantity": "मात्रा"
+  },
+  "agreement": {
+    "buyerName": "खरीदार का नाम",
+    "finalPrice": "अंतिम कीमत (₹)",
+    "dueDate": "नियत तारीख",
+    "terms": "शर्तें",
+    "proceed": "आगे बढ़ें",
+    "verifyOtpToProceed": "आगे बढ़ने के लिए OTP सत्यापित करें",
+    "agreementSent": "समझौता जनरेट हुआ और दोनों को भेजा गया।"
+  },
+  "schemes": {
+    "filterByState": "राज्य के अनुसार फ़िल्टर",
+    "search": "योजनाएं खोजें",
+    "eligibility": "पात्रता",
+    "timeline": "समयसीमा",
+    "officialSite": "आधिकारिक वेबसाइट"
+  },
+  "ai": {
+    "placeholder": "मिट्टी, फसल, मौसम के बारे में पूछें...",
+    "send": "भेजें",
+    "farmingOnly": "मैं केवल खेती से जुड़े सवालों का जवाब देता हूं।"
+  },
+  "dashboard": {
+    "welcome": "स्वागत है",
+    "equipment": "उपकरण",
+    "land": "जमीन",
+    "schemes": "योजनाएं",
+    "trade": "व्यापार",
+    "agreements": "मेरे समझौते",
+    "profileCompletion": "प्रोफाइल पूरी करें"
+  },
+  "admin": {
+    "panel": "एडमिन पैनल",
+    "users": "उपयोगकर्ता",
+    "approveListings": "सूची स्वीकृत करें",
+    "agreements": "समझौते",
+    "refreshSchemes": "योजनाएं रिफ्रेश करें",
+    "stats": "आंकड़े"
+  }
+}

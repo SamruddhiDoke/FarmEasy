@@ -1,0 +1,121 @@
+{
+  "app": {
+    "title": "FARM EASY",
+    "tagline": "Farming Made Easy for Everyone",
+    "getStarted": "Get Started",
+    "browseEquipment": "Browse Equipment",
+    "home": "Home",
+    "schemes": "Schemes",
+    "products": "Products",
+    "trade": "Trade",
+    "help": "Help",
+    "login": "Login",
+    "profile": "Profile",
+    "logout": "Logout",
+    "register": "Register"
+  },
+  "counters": {
+    "activeFarmers": "Active Farmers",
+    "equipmentListed": "Equipment Listed",
+    "govtSchemes": "Government Schemes"
+  },
+  "features": {
+    "equipmentRental": "Equipment Rental",
+    "equipmentRentalDesc": "Rent or share farm equipment with nearby farmers.",
+    "landRental": "Land Rental",
+    "landRentalDesc": "Lease land between farmers easily.",
+    "cropTrade": "Crop Trade",
+    "cropTradeDesc": "Direct crop trade from farmer to customer, no middleman.",
+    "govtSchemes": "Government Schemes",
+    "govtSchemesDesc": "Discover and apply for government schemes.",
+    "aiAssistant": "AI Assistant",
+    "aiAssistantDesc": "Get farming tips and answers 24/7."
+  },
+  "auth": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "location": "Location",
+    "language": "Language",
+    "role": "Role",
+    "farmer": "Farmer",
+    "customer": "Customer",
+    "verifyOtp": "Verify OTP",
+    "otpSent": "OTP sent to your email",
+    "enterOtp": "Enter OTP",
+    "back": "Back",
+    "resendOtp": "Resend OTP",
+    "resendIn": "Resend in {{seconds}}s",
+    "otpHint": "Enter the 6-digit code from your email (spaces are OK if you paste).",
+    "loginSubtitle": "Sign in to manage listings, trade, and schemes",
+    "registerSubtitle": "Create your account and join the community",
+    "secureStep": "Almost there — verify your email"
+  },
+  "equipment": {
+    "title": "Equipment",
+    "listEquipment": "List Equipment",
+    "titleLabel": "Title",
+    "description": "Description",
+    "pricePerDay": "Price per day (₹)",
+    "category": "Category",
+    "availability": "Availability",
+    "location": "Location",
+    "contact": "Contact",
+    "confirmDeal": "Confirm Deal",
+    "nearby": "Nearby first"
+  },
+  "land": {
+    "title": "Land",
+    "listLand": "List Land",
+    "pricePerMonth": "Price per month (₹)",
+    "area": "Area"
+  },
+  "trade": {
+    "title": "Crop Trade",
+    "listCrop": "List Crop",
+    "cropName": "Crop Name",
+    "pricePerUnit": "Price per unit (₹)",
+    "unit": "Unit",
+    "quantity": "Quantity"
+  },
+  "agreement": {
+    "buyerName": "Buyer Name",
+    "finalPrice": "Final Price (₹)",
+    "dueDate": "Due Date",
+    "terms": "Terms",
+    "proceed": "Proceed",
+    "verifyOtpToProceed": "Verify OTP to proceed",
+    "agreementSent": "Agreement generated and sent to both parties."
+  },
+  "schemes": {
+    "filterByState": "Filter by state",
+    "search": "Search schemes",
+    "eligibility": "Eligibility",
+    "timeline": "Timeline",
+    "officialSite": "Official website"
+  },
+  "ai": {
+    "placeholder": "Ask about soil, crops, weather...",
+    "send": "Send",
+    "farmingOnly": "I only answer farming-related questions."
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "equipment": "Equipment",
+    "land": "Land",
+    "schemes": "Schemes",
+    "trade": "Trade",
+    "agreements": "My Agreements",
+    "profileCompletion": "Complete your profile"
+  },
+  "admin": {
+    "panel": "Admin Panel",
+    "users": "Users",
+    "approveListings": "Approve Listings",
+    "agreements": "Agreements",
+    "refreshSchemes": "Refresh Schemes",
+    "stats": "Statistics"
+  }
+}

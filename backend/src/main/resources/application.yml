@@ -1,0 +1,62 @@
+spring:
+  application:
+    name: frameasy-backend
+  datasource:
+    url: jdbc:mysql://localhost:3307/frameasy?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    open-in-view: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: krushi.app25@gmail.com
+    password: kfshcgrgdqiaance
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+# JWT
+jwt:
+  secret: ${JWT_SECRET:FrameasySuperSecretKeyForJWTTokenGeneration2024Production}
+  expiration-ms: 86400000  # 24 hours
+
+# data.gov.in API (schemes)
+schemes:
+  api-url: https://api.data.gov.in/resource
+  cache-duration-hours: 24
+
+# File storage
+upload:
+  dir: ./uploads
+  equipment: equipment
+  land: land
+  trade: trade
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    com.frameasy: DEBUG
+    org.springframework.security: INFO

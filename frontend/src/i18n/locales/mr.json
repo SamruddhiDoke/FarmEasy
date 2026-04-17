@@ -1,0 +1,121 @@
+{
+  "app": {
+    "title": "फार्म ईझी",
+    "tagline": "शेती सर्वांसाठी सोपी",
+    "getStarted": "सुरू करा",
+    "browseEquipment": "उपकरणे ब्राउझ करा",
+    "home": "मुख्यपृष्ठ",
+    "schemes": "योजना",
+    "products": "उत्पादने",
+    "trade": "व्यापार",
+    "help": "मदत",
+    "login": "लॉगिन",
+    "profile": "प्रोफाइल",
+    "logout": "लॉग आउट",
+    "register": "नोंदणी"
+  },
+  "counters": {
+    "activeFarmers": "सक्रिय शेतकरी",
+    "equipmentListed": "उपकरणे यादी",
+    "govtSchemes": "सरकारी योजना"
+  },
+  "features": {
+    "equipmentRental": "उपकरण भाडे",
+    "equipmentRentalDesc": "जवळच्या शेतकऱ्यांसोबत उपकरणे भाड्याने घ्या.",
+    "landRental": "जमीन भाडे",
+    "landRentalDesc": "शेतकऱ्यांमध्ये जमीन भाड्याने सहज द्या.",
+    "cropTrade": "पीक व्यापार",
+    "cropTradeDesc": "शेतकरी ते ग्राहक थेट व्यापार, दलाल नाही.",
+    "govtSchemes": "सरकारी योजना",
+    "govtSchemesDesc": "सरकारी योजना शोधा आणि अर्ज करा.",
+    "aiAssistant": "AI सहाय्यक",
+    "aiAssistantDesc": "२४/७ शेतीची टिप्स मिळवा."
+  },
+  "auth": {
+    "name": "नाव",
+    "email": "ईमेल",
+    "phone": "फोन",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड पुष्टी",
+    "location": "स्थान",
+    "language": "भाषा",
+    "role": "भूमिका",
+    "farmer": "शेतकरी",
+    "customer": "ग्राहक",
+    "verifyOtp": "OTP सत्यापित करा",
+    "otpSent": "OTP आपल्या ईमेलवर पाठवला",
+    "enterOtp": "OTP प्रविष्ट करा",
+    "back": "मागे",
+    "resendOtp": "OTP पुन्हा पाठवा",
+    "resendIn": "{{seconds}} सेकंदात पुन्हा पाठवा",
+    "otpHint": "ईमेलमधील 6 अंकी कोड टाका (चिकटवल्यास रिकाम्या जागा चालतात).",
+    "loginSubtitle": "यादी, व्यापार आणि योजना व्यवस्थापित करण्यासाठी साइन इन करा",
+    "registerSubtitle": "खाते तयार करा आणि समुदायात सामील व्हा",
+    "secureStep": "जवळजवळ झाले — ईमेल सत्यापित करा"
+  },
+  "equipment": {
+    "title": "उपकरणे",
+    "listEquipment": "उपकरण यादी करा",
+    "titleLabel": "शीर्षक",
+    "description": "वर्णन",
+    "pricePerDay": "दररोज किंमत (₹)",
+    "category": "वर्ग",
+    "availability": "उपलब्धता",
+    "location": "स्थान",
+    "contact": "संपर्क",
+    "confirmDeal": "डील पुष्टी",
+    "nearby": "जवळचे प्रथम"
+  },
+  "land": {
+    "title": "जमीन",
+    "listLand": "जमीन यादी करा",
+    "pricePerMonth": "महिन्याकिंमत (₹)",
+    "area": "क्षेत्र"
+  },
+  "trade": {
+    "title": "पीक व्यापार",
+    "listCrop": "पीक यादी करा",
+    "cropName": "पिकाचे नाव",
+    "pricePerUnit": "प्रति युनिट किंमत (₹)",
+    "unit": "युनिट",
+    "quantity": "प्रमाण"
+  },
+  "agreement": {
+    "buyerName": "खरेदीदार नाव",
+    "finalPrice": "अंतिम किंमत (₹)",
+    "dueDate": "देय तारीख",
+    "terms": "अटी",
+    "proceed": "पुढे जा",
+    "verifyOtpToProceed": "पुढे जाण्यासाठी OTP सत्यापित करा",
+    "agreementSent": "करार तयार आणि दोघांनाही पाठवला."
+  },
+  "schemes": {
+    "filterByState": "राज्यानुसार फिल्टर",
+    "search": "योजना शोधा",
+    "eligibility": "पात्रता",
+    "timeline": "कालमर्यादा",
+    "officialSite": "अधिकृत संकेतस्थळ"
+  },
+  "ai": {
+    "placeholder": "माती, पीक, हवामान विचारा...",
+    "send": "पाठवा",
+    "farmingOnly": "मी फक्त शेतीशी संबंधित प्रश्नांची उत्तरे देतो."
+  },
+  "dashboard": {
+    "welcome": "स्वागत",
+    "equipment": "उपकरणे",
+    "land": "जमीन",
+    "schemes": "योजना",
+    "trade": "व्यापार",
+    "agreements": "माझे करार",
+    "profileCompletion": "प्रोफाइल पूर्ण करा"
+  },
+  "admin": {
+    "panel": "अॅडमिन पॅनेल",
+    "users": "वापरकर्ते",
+    "approveListings": "यादी मंजूर करा",
+    "agreements": "करार",
+    "refreshSchemes": "योजना रिफ्रेश करा",
+    "stats": "आकडे"
+  }
+}
