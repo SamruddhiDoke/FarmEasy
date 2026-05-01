@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
 import { land as landApi, agreements } from '../services/api';
 import ChatModal from '../components/ChatModal';
+import { toast } from 'react-toastify';
 
 export default function LandDetailPage() {
   const { id } = useParams();
@@ -27,7 +28,13 @@ export default function LandDetailPage() {
   const handleSendOtp = () => {
     if (!user?.email) return;
     setError('');
-    agreements.sendOtp(user.email).then(() => setOtpSent(true)).catch(() => setError('Failed to send OTP'));
+    agreements.sendOtp(user.email).then(() => {
+      setOtpSent(true);
+      toast.info("OTP sent to your email!");
+    }).catch(() => {
+      setError('Failed to send OTP');
+      toast.error('Failed to send OTP');
+    });
   };
 
   const handleConfirmDeal = (e) => {
@@ -44,9 +51,19 @@ export default function LandDetailPage() {
       terms: dealForm.terms,
       otp: dealForm.otp,
     }).then((res) => {
-      if (res.data?.success) { setShowDeal(false); navigate('/dashboard'); }
-      else setError(res.data?.message || 'Failed');
-    }).catch((err) => setError(err.response?.data?.message || 'Failed')).finally(() => setSubmitting(false));
+      if (res.data?.success) { 
+        setShowDeal(false); 
+        toast.success("Land successfully rented! Agreement generated.");
+        navigate('/dashboard'); 
+      }
+      else {
+        setError(res.data?.message || 'Failed');
+        toast.error(res.data?.message || 'Failed to rent land.');
+      }
+    }).catch((err) => {
+      setError(err.response?.data?.message || 'Failed');
+      toast.error(err.response?.data?.message || 'Failed to rent land.');
+    }).finally(() => setSubmitting(false));
   };
 
   if (loading || !item) return <Container className="py-4">{loading ? <Spinner /> : <p>{t('land.notFound')}</p>}</Container>;

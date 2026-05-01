@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
 import { equipment as equipmentApi, agreements, chat } from '../services/api';
 import ChatModal from '../components/ChatModal';
+import { toast } from 'react-toastify';
 
 export default function EquipmentDetailPage() {
   const { id } = useParams();
@@ -29,7 +30,13 @@ export default function EquipmentDetailPage() {
   const handleSendOtp = () => {
     if (!user?.email) return;
     setError('');
-    agreements.sendOtp(user.email).then(() => setOtpSent(true)).catch(() => setError('Failed to send OTP'));
+    agreements.sendOtp(user.email).then(() => {
+      setOtpSent(true);
+      toast.info("OTP sent to your email!");
+    }).catch(() => {
+      setError('Failed to send OTP');
+      toast.error('Failed to send OTP');
+    });
   };
 
   const handleConfirmDeal = (e) => {
@@ -50,10 +57,17 @@ export default function EquipmentDetailPage() {
       .then((res) => {
         if (res.data?.success) {
           setShowDeal(false);
+          toast.success("Item successfully rented! Agreement generated.");
           navigate('/dashboard');
-        } else setError(res.data?.message || 'Failed');
+        } else {
+          setError(res.data?.message || 'Failed');
+          toast.error(res.data?.message || 'Failed to rent item.');
+        }
       })
-      .catch((err) => setError(err.response?.data?.message || 'Failed'))
+      .catch((err) => {
+        setError(err.response?.data?.message || 'Failed');
+        toast.error(err.response?.data?.message || 'Failed to rent item.');
+      })
       .finally(() => setSubmitting(false));
   };
 

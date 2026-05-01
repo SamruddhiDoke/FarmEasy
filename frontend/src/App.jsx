@@ -61,6 +61,9 @@ function AppRoutes() {
   );
 }
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function App() {
   return (
     <AuthProvider>
@@ -74,6 +77,7 @@ export default function App() {
         </main>
         <LanguageSwitcher />
         <AiAssistant />
+        <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar theme="colored" />
       </CartProvider>
     </AuthProvider>
   );
