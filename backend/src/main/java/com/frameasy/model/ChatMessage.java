@@ -45,5 +45,6 @@ public class ChatMessage {
     private Instant readAt;
 
     @Column(name = "created_at")
+    @Builder.Default
     private Instant createdAt = Instant.now();
 }

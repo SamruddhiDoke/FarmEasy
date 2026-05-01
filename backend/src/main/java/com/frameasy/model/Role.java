@@ -22,5 +22,6 @@ public class Role {
     private String name;
 
     @Column(name = "created_at")
+    @Builder.Default
     private Instant createdAt = Instant.now();
 }

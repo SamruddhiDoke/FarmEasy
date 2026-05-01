@@ -1,19 +1,17 @@
 spring:
   application:
     name: frameasy-backend
-  cloud:
-    gcp:
-      sql:
-        database-name: farmeasy
-        instance-connection-name: farmeasy-495005:us-central1:farmeasy-db-instance
   datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:mysql:///farmeasy?cloudSqlInstance=farmeasy-495005:us-central1:farmeasy-db-instance&socketFactory=com.google.cloud.sql.mysql.SocketFactory}
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/farmeasy?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Kolkata}
     username: ${SPRING_DATASOURCE_USERNAME:root}
-    password: ${SPRING_DATASOURCE_PASSWORD:Samruddhi@2006}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       maximum-pool-size: 10
-      minimum-idle: 5
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
   jpa:
     hibernate:
       ddl-auto: update

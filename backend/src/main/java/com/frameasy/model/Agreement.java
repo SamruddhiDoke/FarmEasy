@@ -56,5 +56,6 @@ public class Agreement {
     private String pdfPath;
 
     @Column(name = "signed_at")
+    @Builder.Default
     private Instant signedAt = Instant.now();
 }

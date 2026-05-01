@@ -34,5 +34,6 @@ public class OtpVerification {
     private boolean used = false;
 
     @Column(name = "created_at")
+    @Builder.Default
     private Instant createdAt = Instant.now();
 }

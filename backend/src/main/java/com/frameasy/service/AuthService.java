@@ -43,8 +43,13 @@ public class AuthService {
         if (!req.getPassword().equals(req.getConfirmPassword())) {
             return ApiResponse.error("Passwords do not match");
         }
-        Role role = roleRepository.findByName("ROLE_" + req.getRole().toUpperCase())
-                .orElse(roleRepository.findByName("ROLE_FARMER").orElseThrow());
+        // Resolve role — default to ROLE_FARMER if not specified or not found
+        String requestedRole = (req.getRole() != null && !req.getRole().isBlank())
+                ? "ROLE_" + req.getRole().trim().toUpperCase()
+                : "ROLE_FARMER";
+        Role role = roleRepository.findByName(requestedRole)
+                .orElseGet(() -> roleRepository.findByName("ROLE_FARMER")
+                        .orElseGet(() -> roleRepository.save(Role.builder().name("ROLE_FARMER").build())));
         User user = User.builder()
                 .name(req.getName())
                 .email(email)

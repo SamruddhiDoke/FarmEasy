@@ -43,5 +43,6 @@ public class Scheme {
     private String rawJson;
 
     @Column(name = "fetched_at")
+    @Builder.Default
     private Instant fetchedAt = Instant.now();
 }
