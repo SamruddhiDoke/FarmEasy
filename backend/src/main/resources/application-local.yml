@@ -1,0 +1,38 @@
+# ============================================================
+# LOCAL DEVELOPMENT PROFILE
+# Activated by: SPRING_PROFILES_ACTIVE=local (default)
+# Database: Standard MySQL on localhost:3306
+# Cloud SQL Socket Factory: NOT used in this profile.
+# ============================================================
+spring:
+  autoconfigure:
+    exclude:
+      # Exclude Cloud SQL auto-configuration entirely when running locally.
+      # This prevents com.google.cloud.spring.autoconfigure.sql.CloudSqlEnvironmentPostProcessor
+      # from attempting to initialize the Cloud SQL Socket Factory, which causes
+      # IllegalArgumentException: A database name must be provided (Exit Code 1).
+      - com.google.cloud.spring.autoconfigure.sql.GcpCloudSqlAutoConfiguration
+  datasource:
+    # Standard JDBC URL for a locally running MySQL instance.
+    # Override via environment variable SPRING_DATASOURCE_URL if your local
+    # MySQL runs on a different port or has a different database name.
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/farmeasy?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Kolkata&createDatabaseIfNotExist=true}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      pool-name: FarmEasy-Local-Pool
+
+logging:
+  level:
+    root: INFO
+    com.frameasy: DEBUG
+    org.springframework.security: DEBUG
+    # Full Spring DEBUG for diagnosing local startup issues
+    org.springframework: DEBUG
+    com.zaxxer.hikari: DEBUG
