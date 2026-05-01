@@ -2,10 +2,13 @@
 # PRODUCTION PROFILE - Google Cloud Run
 # Activated by: SPRING_PROFILES_ACTIVE=prod
 # Database: Google Cloud SQL (MySQL) via Unix Socket Factory
-# Required Cloud Run flags:
+#
+# Required Cloud Run deployment flags:
 #   --add-cloudsql-instances=farmeasy-495005:us-central1:farmeasy-db-instance
-# Required environment variables in Cloud Run:
+#
+# Required environment variables (set in Cloud Run service config):
 #   SPRING_PROFILES_ACTIVE=prod
+#   SPRING_CLOUD_GCP_SQL_ENABLED=true
 #   SPRING_DATASOURCE_USERNAME=root
 #   SPRING_DATASOURCE_PASSWORD=<secret>
 #   JWT_SECRET=<secret>
@@ -14,13 +17,15 @@ spring:
   cloud:
     gcp:
       sql:
-        # The Cloud SQL instance connection name in the format: project:region:instance
+        # This re-enables the Cloud SQL EnvironmentPostProcessor for the prod
+        # environment. The base config defaults this to false; it is overridden
+        # at Cloud Run deployment time via SPRING_CLOUD_GCP_SQL_ENABLED=true.
         database-name: farmeasy
         instance-connection-name: farmeasy-495005:us-central1:farmeasy-db-instance
   datasource:
-    # The Cloud SQL Socket Factory intercepts this URL and routes the connection
-    # through the Cloud SQL Auth Proxy via a Unix domain socket.
-    # The host portion (///) is intentionally empty; the socket factory resolves it.
+    # The Cloud SQL Socket Factory resolves the connection via the Unix domain
+    # socket injected by the Cloud Run sidecar. The host portion (///) is
+    # intentionally left empty; the socket factory populates it at runtime.
     url: ${SPRING_DATASOURCE_URL:jdbc:mysql:///farmeasy?cloudSqlInstance=farmeasy-495005:us-central1:farmeasy-db-instance&socketFactory=com.google.cloud.sql.mysql.SocketFactory&useSSL=false}
     username: ${SPRING_DATASOURCE_USERNAME}
     password: ${SPRING_DATASOURCE_PASSWORD}
@@ -38,6 +43,4 @@ logging:
     root: WARN
     com.frameasy: INFO
     org.springframework.security: WARN
-    # Temporarily enabled to capture full bean initialization trace during deployment.
-    # Remove or set to WARN once the production deployment is confirmed stable.
     org.springframework: DEBUG
